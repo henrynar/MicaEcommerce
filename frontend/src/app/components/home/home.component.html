@@ -1,0 +1,48 @@
+<app-header-user></app-header-user>
+
+
+
+<!--Inicio Page Content -->
+<div class="container">
+  <header class="jumbotron my-4">
+    <h1 class="display-3">Bienvenido a Spring Ecommerce 2023</h1>
+    <p class="lead">Tu tienda de productos en Línea</p>
+  </header>
+
+<!-- INICIO ACA SE MUESTRA EL PRODUCTO -->
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let product of products" class="col-md-3">
+
+          <div class="product-box">
+            <img src="{{product.urlImage}}">
+            <h2 class="card-text">{{product.name}} </h2>
+            <div class="price">{{product.price}}</div>
+            <div class="product-show">
+              <a [routerLink]="['/cart/detailproduct', product.id]" class="primary-btn" >Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN ACA SE MUESTRA EL PRODUCTO -->
+
+</div>
+<!--Fin Page Content -->
+
+<!--Inicio Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Spring eCommerce 2023</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!--Fin Footer -->
+
+
+
